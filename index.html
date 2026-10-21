@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>PPE 202 · Ethics, Markets, and Politics</title>
+<meta name="description" content="Course companion for PPE 202 (Duke Kunshan, Fall 2026, Session 2): schedule, readings, assignments and grading.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="color-scheme" content="dark light">
+<script>
+  // theme before paint: saved choice wins, otherwise CSS follows prefers-color-scheme
+  try { const t = localStorage.getItem("ppe-theme"); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/site.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="bar" role="banner">
+  <div class="bar-in">
+    <a class="brand sc" href="#top"><b>PPE 202</b><span class="bt"> · Ethics, Markets &amp; Politics</span></a>
+    <nav aria-label="Sections" id="toc">
+      <a href="#s-title"><span class="n">1</span>Course</a>
+      <a href="#s-scope"><span class="n">2</span>Arc</a>
+      <a href="#s-calendar"><span class="n">3</span>Calendar</a>
+      <a href="#s-library"><span class="n">4</span>Readings</a>
+      <a href="#s-grading"><span class="n">5</span>Assignments</a>
+      <a href="#s-rules"><span class="n">6</span>Rules</a>
+    </nav>
+    <div class="tools">
+      <button class="pill-btn" id="search-btn" type="button" aria-label="Search (press /)"><svg width="13" height="13" viewBox="0 0 16 16" aria-hidden="true" style="stroke:currentColor;fill:none;stroke-width:1.4"><circle cx="7" cy="7" r="5"/><path d="M11 11l3.5 3.5"/></svg><span class="lbl">Search</span> <kbd>/</kbd></button>
+      <div class="seg" role="group" aria-label="Time zone" id="tz-seg">
+        <button type="button" data-tz="Asia/Shanghai" aria-pressed="true" title="Asia/Shanghai (course time)">BJT</button>
+        <button type="button" data-tz="America/New_York" aria-pressed="false" title="America/New_York (Canvas profile time)">NY</button>
+      </div>
+      <button class="icon-btn" id="theme-btn" type="button" aria-label="Switch light or dark theme">
+        <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M13.5 9.6A6 6 0 0 1 6.4 2.5a6 6 0 1 0 7.1 7.1z"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+  <div class="wrap" id="top">
+
+    <section class="section hero" id="s-title" aria-labelledby="h-title"></section>
+
+    <section class="section" id="s-scope" aria-labelledby="h-scope"></section>
+
+    <section class="section" id="s-calendar" aria-labelledby="h-calendar"></section>
+
+    <section class="section" id="s-library" aria-labelledby="h-library"></section>
+
+    <section class="section" id="s-grading" aria-labelledby="h-grading"></section>
+
+    <section class="section" id="s-rules" aria-labelledby="h-rules"></section>
+
+    <footer class="colophon" id="colophon"></footer>
+  </div>
+</main>
+
+<div class="scrim" id="scrim"></div>
+<aside class="drawer" id="drawer" role="dialog" aria-modal="true" aria-labelledby="d-title" aria-hidden="true">
+  <div class="d-top">
+    <div class="d-crumb" id="d-crumb"></div>
+    <div class="d-nav" id="d-nav"></div>
+    <button class="icon-btn" id="d-close" type="button" aria-label="Close panel (Esc)"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3.5 3.5l9 9M12.5 3.5l-9 9"/></svg></button>
+  </div>
+  <div class="d-body" id="d-body"></div>
+</aside>
+
+<div class="search" id="search" role="dialog" aria-modal="true" aria-label="Search">
+  <div class="scrim" data-close></div>
+  <div class="search-box">
+    <div class="search-top">
+      <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true" style="stroke:var(--muted);fill:none;stroke-width:1.4"><circle cx="7" cy="7" r="5"/><path d="M11 11l3.5 3.5"/></svg>
+      <input id="search-input" type="search" placeholder="Search sessions, readings (full text), assignments…" autocomplete="off" aria-controls="search-res">
+      <button class="icon-btn" type="button" data-close aria-label="Close search"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3.5 3.5l9 9M12.5 3.5l-9 9"/></svg></button>
+    </div>
+    <div class="search-res" id="search-res" role="listbox"></div>
+    <div class="search-foot"><span><kbd>↑</kbd> <kbd>↓</kbd> move</span><span><kbd>↵</kbd> open</span><span><kbd>esc</kbd> close</span><span><kbd>J</kbd>/<kbd>K</kbd> step through sessions</span><span id="search-status"></span></div>
+  </div>
+</div>
+
+<div id="preview" role="tooltip" aria-hidden="true"></div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="data/data.js"></script>
+<script src="js/art.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
